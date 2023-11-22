@@ -1,0 +1,123 @@
+body>* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(29, 29, 35);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    color: white;
+    padding: 50px 50px;
+}
+
+.heading {
+    font-size: 26px;
+    margin: 0;
+}
+
+.card {
+    background-color: rgb(52, 52, 74);
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    box-sizing: border-box;
+    width: 730px;
+}
+
+.card2 {
+    background-color: rgb(240, 247, 87);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 730px;
+    align-items: center;
+    gap: 120px;
+    padding-right: 80px;
+    box-sizing: border-box;
+}
+
+.card2>p {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(52, 52, 74);
+}
+
+.card2>button {
+    width: 80px;
+    padding: 10px 0px;
+    background-color: rgb(52, 52, 74);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+}
+
+.inputs>input {
+    background-color: rgb(52, 52, 74);
+    border: none;
+    border-bottom: 2px solid white;
+    width: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.inputs {
+    font-size: 30px;
+}
+
+.set_button {
+    padding: 10px 30px;
+    background-color: rgb(240, 247, 87);
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+}
+
+.current_timers {
+    padding: 10px 80px;
+    background-color: rgb(57, 57, 62);
+    border-radius: 50px;
+}
+
+.timers {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.time_left {
+    font-size: 30px;
+}
+
+.time_left>input {
+    background-color: rgb(52, 52, 74);
+    border: none;
+    width: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.delete_button {
+    width: 80px;
+    padding: 10px 0px;
+    background-color: rgb(240, 247, 87);
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+}
