@@ -38,7 +38,7 @@ function addTimer() {
         `;
         hh.value = '';
         mm.value = '';
-        // tt.value = '';
+        tt.value = '';
         noTimers.style.display = 'none';
         timers.appendChild(card);
         startTimer(idx);
