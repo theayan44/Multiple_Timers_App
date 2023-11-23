@@ -5,6 +5,7 @@ const timers = document.getElementsByClassName("timers")[0];
 const noTimers = document.getElementsByClassName("no_timers")[0];
 let idx = 0;
 let arr = [];
+const alarms = []
 
 function addTimer() {
     // console.log(hh.value > 0);
@@ -37,7 +38,7 @@ function addTimer() {
         `;
         hh.value = '';
         mm.value = '';
-        tt.value = '';
+        // tt.value = '';
         noTimers.style.display = 'none';
         timers.appendChild(card);
         startTimer(idx);
@@ -64,7 +65,7 @@ function startTimer(idx) {
         if (sec.value == 0 && min.value == 0 && hr.value == 0) {
             clearInterval(arr[idx]);
             stopTimer(idx);
-            playAlarm();
+            playAlarm(idx);
         }
 
     }, 1000);
@@ -96,17 +97,19 @@ function stopTimer(idx) {
     card2.classList.add("card2");
     card2.innerHTML = `
         <p>Timer Is Up !!!</p>
-        <button onclick=removeCard(event)>Delete</button>
+        <button id="${idx}" onclick=removeCard(event)>Delete</button>
     `;
 }
 
 function removeCard(event) {
+    const index_number = event.target.getAttribute("id");
     event.target.parentElement.remove();
+    alarms[index_number].pause();
     if (timers.children.length === 0)
         noTimers.style.display = 'block';
 }
 
-function playAlarm() {
-    const alarm = new Audio("./alarm.mp3");
-    alarm.play();
+function playAlarm(index_number) {
+    alarms[index_number] = new Audio("./alarm.mp3");
+    alarms[index_number].play();
 }
