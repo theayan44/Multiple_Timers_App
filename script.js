@@ -64,6 +64,7 @@ function startTimer(idx) {
         if (sec.value == 0 && min.value == 0 && hr.value == 0) {
             clearInterval(arr[idx]);
             stopTimer(idx);
+            playAlarm();
         }
 
     }, 1000);
@@ -103,4 +104,9 @@ function removeCard(event) {
     event.target.parentElement.remove();
     if (timers.children.length === 0)
         noTimers.style.display = 'block';
+}
+
+function playAlarm() {
+    const alarm = new Audio("./alarm.mp3");
+    alarm.play();
 }
