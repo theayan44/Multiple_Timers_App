@@ -33,7 +33,7 @@ function addTimer() {
             </div>
             <div class="buttons">
                 <button class="delete_button" index_number="${idx}" onclick=pauseTimer(event)>Pause</button>
-                <button class="delete_button" index_number="${idx}" onclick=deleteTimer(event)>Cancel</button>
+                <button class="delete_button" index_number="${idx}" onclick=cancelTimer(event)>Cancel</button>
             </div>
         `;
         hh.value = '';
@@ -82,7 +82,7 @@ function pauseTimer(event) {
     }
 }
 
-function deleteTimer(event) {
+function cancelTimer(event) {
     const index_number = event.target.getAttribute("index_number");
     clearInterval(arr[index_number]);
     const timerToBeDelete = event.target.parentElement.parentElement;
